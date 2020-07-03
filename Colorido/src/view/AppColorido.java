@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package view;
+import javax.swing.JInternalFrame;
 import javax.swing.JOptionPane;
 /**
  *
@@ -100,30 +101,45 @@ public class AppColorido extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+       //polimorfismo
+    private void exibirJanela (JInternalFrame frame){
+        //add o objt na interface
+        telaColorida.add(frame);
+        
+        //exibindo o objeto
+        frame.show();
+    }
+    
     private void rosaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rosaActionPerformed
         // TODO add your handling code here:
         
+        //chamada do método exibirJanela
+        this.exibirJanela(new Rosa()); //passando instancia do rosinha
+        
         //criação e instancia do objeto da classe rosa
-        Rosa rosa = new Rosa();
+        //Rosa rosa = new Rosa();
         
         //colocar o obejto na interface
-        telaColorida.add(rosa);
+        //telaColorida.add(rosa);
         
         //exibindo o objt
-        rosa.show();
+        //rosa.show();
     }//GEN-LAST:event_rosaActionPerformed
 
     private void roxoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_roxoActionPerformed
         // TODO add your handling code here:
         
+        //chamada do metodo exibirJanela
+        this.exibirJanela(new Roxo());
+        
         //criacao e instancia do objeto
-        Roxo roxo = new Roxo ();
+        //Roxo roxo = new Roxo ();
         
         //colocando o objeto na interface
-        telaColorida.add(roxo);
+        //telaColorida.add(roxo);
         
         //exibindo objt
-        roxo.show();
+        //roxo.show();
     }//GEN-LAST:event_roxoActionPerformed
 
     private void sairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairActionPerformed
