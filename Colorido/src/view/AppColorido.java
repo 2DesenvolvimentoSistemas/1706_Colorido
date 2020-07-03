@@ -101,8 +101,16 @@ public class AppColorido extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-       //polimorfismo
     private void exibirJanela (JInternalFrame frame){
+        
+        //comparação de objeto para ver se ele é instancia de determinada classe
+        if(frame instanceof Rosa){
+            frame.setTitle("Rosa Barbie Girl:");
+        }else{
+            frame.setTitle("Roxinho de uvinha:");
+        }
+        
+        //polimorfismo:
         //add o objt na interface
         telaColorida.add(frame);
         
